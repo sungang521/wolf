@@ -14,5 +14,22 @@
         <module>wolf-service</module>
         <module>wolf-util</module>
         <module>wolf-api</module>
+        <module>wolf-bootstrap</module>
     </modules>
+
+    <properties>
+        <spring-boot-dependencies.version>2.1.17.RELEASE</spring-boot-dependencies.version>
+    </properties>
+    <dependencyManagement>
+    <dependencies>
+    <dependency>
+        <!-- Import dependency management from Spring Boot -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot-dependencies.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+    </dependency>
+    </dependencies>
+    </dependencyManagement>
 </project>
